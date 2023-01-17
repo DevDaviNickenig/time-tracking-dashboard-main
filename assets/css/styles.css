@@ -17,3 +17,29 @@
   --font-rubik: 'Rubik', sans-serif;
 
 }
+
+body {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--very-dark-blue);
+  place-items: center;
+}
+
+.rastreador-atividade {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-template-columns: 1fr;
+  justify-items: center;  
+}
+
+@media screen and (min-width: 600px) {
+  .rastreador-atividade {
+    grid-template-columns: repeat(auto-fit), minmax(20rem, 1fr);
+    grid-template-rows: 1fr 1fr;
+    min-height: 50rem;
+    gap: 2rem;
+  }
+}
