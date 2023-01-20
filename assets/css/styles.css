@@ -33,7 +33,8 @@ body {
   grid-auto-rows: max-content;
   grid-template-columns: 1fr;
   justify-items: center;
-  margin: 1rem 1rem 1rem 1rem;      
+  margin: 1rem 1rem 1rem 1rem;
+  gap: 1rem;      
 }
 
 .rastreador-atividade__menu {
@@ -44,7 +45,8 @@ body {
   justify-content: flex-start;
   /* padding: ; */
   gap: 1rem;
-  border-radius: 10px; 
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .rastreador-atividade__usuario {
@@ -54,13 +56,13 @@ body {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-start;
-  padding: 1rem;
+  padding: 1.3rem;
   gap: 1rem;
   border-radius: 10px;   
 }
 
 .rastreador-atividade__usaurio-img {
-  width: 100px;  
+  width: 70px;  
   border: 3px solid #f9f9f9;
   border-radius: 50%;
 }
@@ -88,11 +90,60 @@ body {
 .rastreador-atividade__opcoes {
   display: flex;
   flex-direction: row;
-  max-width: max-content;  
+  flex-grow: 1;
+  max-width: 100%;  
   align-items: center;  
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0rem 1rem 1rem 1rem;
+  /* margin-bottom: 1rem; */
 }
+
+.rastreador-atividade__opcoes-botoes {
+  border: none;
+  background-color: var(--dark-blue);
+  color: var(--desaturated-blue);
+  font-family: var(--font-rubik);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.rastreador-atividade__card {
+  display: grid;
+  /* flex-flow: column wrap; */
+  grid-template-columns: 1fr;
+  grid-template-rows: 2rem 1fr;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-blue);
+  overflow: hidden;
+}
+
+.rastreador-fundo {
+  display: grid;
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+
+.rastreador-atividade__card:is(.work) {
+  background: var(--work);
+}
+
+.rastreador-atividade__card:is(.play) {
+  background-color: var(--play);
+}
+
+.rastreador-atividade__card:is(.study) {
+  background-color: var(--study);
+}
+
+.rastreador-atividade__card:is(.exercise) {
+  background-color: var(--exercise);
+}
+
+.rastreador-atividade__card:is(.social) {
+  background-color: var(--social);
+}
+
 
 @media screen and (min-width: 600px) {
   .rastreador-atividade {
@@ -106,6 +157,7 @@ body {
     grid-row: 1 / 3;
     display: flex;
     flex-flow: column nowrap;    
+    overflow: hidden;   
   }
 
 }
