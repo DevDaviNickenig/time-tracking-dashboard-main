@@ -245,4 +245,13 @@ body {
     gap: 1rem;
     margin: 1rem;
   }
+
+  .rastreador-atividade__opcoes {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rastreador-atividade__opcoes-botoes {
+    padding: 0.5rem;
+  }
 }
