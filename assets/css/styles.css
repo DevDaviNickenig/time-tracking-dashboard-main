@@ -214,6 +214,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-template-rows: 1fr 1fr;
     min-height: 50rem;
+    max-width: 90rem;
     gap: 2rem;
   }
 
