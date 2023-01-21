@@ -209,12 +209,14 @@ body {
   font-size: 2rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
   .rastreador-atividade {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    min-height: 30rem;
-    max-width: 90rem;
+    /* min-height: 30rem;
+    max-height: 80vh;
+    max-width: 80vw; */
+    margin: 5rem;
     gap: 2rem;
   }
 
@@ -231,9 +233,9 @@ body {
     background-color: var(--blue);
     width: fit-content;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: flex-start;
-    padding: 2rem 0rem 5rem 2rem;
+    margin: 0;
   }
 
   .rastreador-atividade__usuario-nome {
@@ -243,7 +245,8 @@ body {
 
   .rastreador-atividade__usuario-container {
     gap: 1rem;
-    margin: 1rem;
+    margin-bottom: 4rem;
+    max-width: 70%;
   }
 
   .rastreador-atividade__opcoes {
@@ -253,5 +256,15 @@ body {
 
   .rastreador-atividade__opcoes-botoes {
     padding: 0.5rem;
+  }
+
+  .atividade-tempo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .atividade-tempo__atual {
+    font-size: 3rem;
+    margin-bottom: 1rem;
   }
 }
