@@ -107,8 +107,12 @@ body {
   cursor: pointer;
 }
 
-.rastreador-atividade__opcoes-botoes:hover,
-.rastreador-atividade__opcoes-botoes:active {
+.rastreador-atividade__opcoes-botoes:hover {
+  color: var(--white);
+  transition: 0.5s;
+}
+
+.rastreador-atividade__opcoes-botoes.active {
   color: var(--white);
   transition: 0.5s;
 }

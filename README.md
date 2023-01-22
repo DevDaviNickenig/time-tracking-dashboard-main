@@ -5,9 +5,14 @@ O projeto foi idealizado para se utilizar tanto de flexbox quanto de grid tampla
 [x] Estruturar o HTML de acordo com os wraps necessários.
 [x] Estruturar o grid principal, para que tenha a funcionalidade tanto no desktop e mobile.
 
-[/] Estruturar o card principal com flexbox para mobile, adequar os tamanhos de fonte e cores, reduzir a imagem do avatar e colocar uma borda branca.
-- [] Estruturar dentro do flexbox o card que se encontra os botoes para fazer a mudança de estado dos outros cartões que gerenciam o tempo, fazer estilização dos cartões.
-- [] finalizar as estilizações da versão mobile.
+[x] Estruturar o card principal com flexbox para mobile, adequar os tamanhos de fonte e cores, reduzir a imagem do avatar e colocar uma borda branca.
 
-[] Fazer os ajustes necessários para que o grid se comporte em telas muito grande da maneira esperada
-[] interação js......
+- [x] Estruturar dentro do flexbox o card que se encontra os botoes para fazer a mudança de estado dos outros cartões que gerenciam o tempo, fazer estilização dos cartões.
+- [x] finalizar as estilizações da versão mobile.
+
+[x] Fazer os ajustes necessários para que o grid se comporte em telas muito grande da maneira esperada
+[] construção da interação javascript com o html, existem duas abordagens, rederizar os containers diretamente pelo JavaScript ou podemos editar o HTML para que recebe as informações certas do JS.
+
+- [] fecth .json
+- [] botoes funcionais
+- [] funcao alimentada pelo .json
