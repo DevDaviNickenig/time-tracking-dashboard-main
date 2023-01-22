@@ -131,6 +131,8 @@ const trocarInformacoes = (botaoClicado) => {
         const horas = atividade.timeframes[botaoClicado]
         const janela = calcHoras(botaoClicado)
         const classeAtiva = nome.toLowerCase()
+        const section = document.createElement('section')
+        section.classList.add('rastreador-atividade__card', classeAtiva)
     })
 }
 
