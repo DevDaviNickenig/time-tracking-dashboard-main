@@ -149,7 +149,7 @@ const trocarInformacoes = (botaoClicado) => {
         section.classList.add('rastreador-atividade__card', classeAtiva)
         const cards = `
         <div class="rastreador-fundo">
-          <img src="assets/images/icon-${nome}.svg" alt="ícone maleta" />
+          <img src="assets/images/icon-${classeAtiva}.svg" alt="ícone maleta" />
         </div>
         <article class="atividade-informacoes">
           <div class="atividade-topo">
