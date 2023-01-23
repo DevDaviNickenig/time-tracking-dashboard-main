@@ -11,7 +11,7 @@ O projeto foi idealizado para se utilizar tanto de flexbox quanto de grid tampla
 - [x] finalizar as estilizações da versão mobile.
 
 [x] Fazer os ajustes necessários para que o grid se comporte em telas muito grande da maneira esperada
-[] construção da interação javascript com o html, existem duas abordagens, rederizar os containers diretamente pelo JavaScript ou podemos editar o HTML para que recebe as informações certas do JS.
+[X] construção da interação javascript com o html, existem duas abordagens, rederizar os containers diretamente pelo JavaScript ou podemos editar o HTML para que recebe as informações certas do JS.
 
 - [] fecth .json
 - [] botoes funcionais
