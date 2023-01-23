@@ -130,9 +130,34 @@ const trocarInformacoes = (botaoClicado) => {
         const nome = atividade.title
         const horas = atividade.timeframes[botaoClicado]
         const janela = calcHoras(botaoClicado)
-        const classeAtiva = nome.toLowerCase()
+        const classeAtiva = nome.toLowerCase().replace(' ', '');
         const section = document.createElement('section')
         section.classList.add('rastreador-atividade__card', classeAtiva)
+        const cards = `<div class="rastreador-fundo">
+          <img src="assets/images/icon-work.svg" alt="ícone maleta" />
+        </div>
+        <article class="atividade-informacoes">
+          <div class="atividade-topo">
+            <h2 class="atividade-nome">Work</h2>
+            <div class="atividade-opcoes">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="atividade-tempo">
+            <h3 class="atividade-tempo__atual">32hrs</h3>
+            <div class="atividade-tempo__passado">
+              <p class="atividade-tempo__passado-texto">Last Week</p>
+              <p>&nbsp;-&nbsp;</p>
+              <p class="tempo passado">36hrs</p>
+            </div>
+          </div>
+        </article>`
     })
 }
 
