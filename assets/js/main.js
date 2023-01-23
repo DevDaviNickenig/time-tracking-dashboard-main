@@ -102,7 +102,6 @@ let data = [
         }
     }
 ]
-
 const botoes = document.querySelectorAll('.rastreador-atividade__opcoes-botoes');
 console.log(botoes);
 
@@ -112,9 +111,22 @@ const ativarBotaoClicado = (botao) => {
     // console.log(ativarBotaoClicado);
 }
 
+botoes.forEach(botao => {
+    botao.addEventListener('click', () => {
+        ativarBotaoClicado(botao)
+        const botaoClicado = botao.dataset.option
+        trocarInformacoes(botaoClicado)
+    })
+})
+
+const carregarPagina = () => {
+    botoes[1].click()
+}
+
 
 
 const trocarInformacoes = (botaoClicado) => {
+    AtualizarCards()
 
     const calcHoras = (opcao) => {
         if (opcao === 'daily') {
@@ -126,19 +138,22 @@ const trocarInformacoes = (botaoClicado) => {
         }
     }
 
+    const rastreadorAtividade = document.querySelector('section.rastreador-atividade')
+
     data.forEach(atividade => {
-        const nome = atividade.title
+        const nome = atividade.title.replace(' ', '')
         const horas = atividade.timeframes[botaoClicado]
         const janela = calcHoras(botaoClicado)
         const classeAtiva = nome.toLowerCase().replace(' ', '');
         const section = document.createElement('section')
         section.classList.add('rastreador-atividade__card', classeAtiva)
-        const cards = `<div class="rastreador-fundo">
-          <img src="assets/images/icon-work.svg" alt="ícone maleta" />
+        const cards = `
+        <div class="rastreador-fundo">
+          <img src="assets/images/icon-${nome}.svg" alt="ícone maleta" />
         </div>
         <article class="atividade-informacoes">
           <div class="atividade-topo">
-            <h2 class="atividade-nome">Work</h2>
+            <h2 class="atividade-nome">${nome}</h2>
             <div class="atividade-opcoes">
               <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -150,25 +165,28 @@ const trocarInformacoes = (botaoClicado) => {
             </div>
           </div>
           <div class="atividade-tempo">
-            <h3 class="atividade-tempo__atual">32hrs</h3>
+            <h3 class="atividade-tempo__atual">${horas.current}hrs</h3>
             <div class="atividade-tempo__passado">
-              <p class="atividade-tempo__passado-texto">Last Week</p>
+              <p class="atividade-tempo__passado-texto">${janela}</p>
               <p>&nbsp;-&nbsp;</p>
-              <p class="tempo passado">36hrs</p>
+              <p class="tempo passado">${horas.previous}hrs</p>
             </div>
           </div>
-        </article>`
+        </article>
+        `
+        section.innerHTML = cards
+        // console.log(section)
+        rastreadorAtividade.append(section)
     })
 }
 
+function AtualizarCards() {
+    const atualizar = document.querySelectorAll('.rastreador-atividade__card')
+    atualizar.forEach(a => a.remove())
+}
 
-botoes.forEach(botao => {
-    botao.addEventListener('click', () => {
-        ativarBotaoClicado(botao)
-        const botaoClicado = botao.dataset.option
-        trocarInformacoes(botaoClicado)
-    })
-})
+carregarPagina()
+
 
 
 
